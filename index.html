@@ -1,251 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crystal Lake</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.153.0/examples/js/controls/OrbitControls.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-
-<style>
-:root {
-  --primary-color: #5a0bd4;
-  --secondary-color: #3c0f8a;
-  --accent-color: #ff5ca2;
-  --text-color: #ffffff;
-  --background-color: #1a0d2a;
-}
-
-body, html {
-  margin:0; padding:0; width:100%; height:100%; overflow-x:hidden; font-family:'Roboto', sans-serif;
-  background:var(--background-color); cursor:crosshair;
-}
-
-#container { position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; }
-
-.overlay {
-  position:absolute; top:0; left:0; width:100%; height:100%;
-  display:flex; flex-direction:column; justify-content:center; align-items:center;
-  z-index:10; text-align:center; color:var(--text-color); pointer-events:none;
-}
-
-h1 {
-  font-family:'Orbitron', sans-serif;
-  font-size:5em; color:var(--primary-color);
-  text-shadow:0 0 20px var(--primary-color),0 0 40px var(--accent-color);
-  margin-bottom:20px; opacity:0;
-  animation: neonGlow 1.5s infinite alternate;
-}
-
-@keyframes neonGlow {
-  from { text-shadow:0 0 10px var(--accent-color),0 0 30px var(--primary-color); }
-  to { text-shadow:0 0 30px var(--accent-color),0 0 60px var(--primary-color); }
-}
-
-p { font-size:1.5em; margin-bottom:40px; opacity:0; text-shadow:0 0 5px #fff; }
-
-.btn {
-  padding:15px 50px; font-size:1.5em; font-weight:bold; color:var(--text-color);
-  text-decoration:none; border-radius:50px; border:none;
-  background:linear-gradient(45deg, var(--primary-color), var(--accent-color));
-  cursor:pointer; box-shadow:0 0 20px var(--accent-color);
-  opacity:0; transition:0.3s all; position:relative; pointer-events:auto;
-}
-
-.btn:hover { transform:scale(1.2) rotate(-2deg); box-shadow:0 0 50px var(--accent-color),0 0 100px var(--primary-color); }
-
-.section {
-  width:90%; max-width:1200px; background:rgba(30,15,50,0.7); border-radius:20px;
-  padding:40px; margin:20px auto; color:#fff; text-align:left;
-  box-shadow:0 0 20px var(--accent-color); opacity:0; transform:translateY(50px);
-  transition: all 1s ease-out;
-}
-
-.section.show { opacity:1; transform:translateY(0); }
-
-.section h2 {
-  font-family:'Orbitron', sans-serif; color:var(--accent-color); font-size:2.5em;
-  margin-bottom:20px; text-shadow:0 0 10px var(--accent-color);
-}
-
-.card {
-  background:rgba(50,25,80,0.8); border-radius:15px; padding:20px; margin:15px 0;
-  box-shadow:0 0 15px var(--primary-color); transition:0.3s all; cursor:pointer;
-}
-
-.card:hover {
-  transform:translateY(-10px) scale(1.05);
-  box-shadow:0 0 40px var(--accent-color),0 0 60px var(--primary-color);
-}
-
-@media(max-width:768px){
-  h1{ font-size:3em; } p,.btn{ font-size:1.2em; padding:12px 30px; }
-  .section h2{ font-size:2em; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crystal Lake</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-black text-gray-200 font-sans">
+  <!-- Header -->
+  <header class="bg-[#1a0000] text-white p-6 shadow-md sticky top-0 z-50 border-b border-red-800">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <!-- Logo no header -->
+        <img src="https://images-ext-1.discordapp.net/external/E_RSKchcnRsVwnOo62inl04y_OYmFSNz1DLaQwdXyVM/https/cdn.discordapp.com/icons/929147381679783997/d029fcd4917c5e85503e473bc313381d.png?format=webp&quality=lossless" alt="Logo Crystal Lake" class="w-12 h-12 rounded-full border-2 border-red-600">
+        <h1 class="text-2xl font-bold tracking-wide">Crystal Lake</h1>
+      </div>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#sobre" class="hover:text-red-500">Sobre</a>
+        <a href="#projetos" class="hover:text-red-500">Projetos</a>
+        <a href="#eventos" class="hover:text-red-500">Eventos</a>
+        <a href="#membros" class="hover:text-red-500">Membros</a>
+        <a href="#blog" class="hover:text-red-500">Blog</a>
+        <a href="#contato" class="hover:text-red-500">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-<div id="container"></div>
+  <!-- Hero -->
+  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-black via-red-950 to-red-900 text-center px-4">
+    <!-- Logo central -->
+    <img src="https://images-ext-1.discordapp.net/external/E_RSKchcnRsVwnOo62inl04y_OYmFSNz1DLaQwdXyVM/https/cdn.discordapp.com/icons/929147381679783997/d029fcd4917c5e85503e473bc313381d.png?format=webp&quality=lossless" alt="Logo Crystal Lake" 
+         class="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-red-600">
 
-<div class="overlay">
-  <h1 id="title">Crystal Lake</h1>
-  <p id="subtitle">A comunidade mais sombria e futurista</p>
-  <a href="https://discord.gg/DYUWpTf3Bs" target="_blank" class="btn" id="discordBtn">Entrar no Discord</a>
-</div>
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-4 text-white">Bem-vindo à Crystal Lake</h2>
+    <p class="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl">
+      Uma comunidade unida pela tecnologia, aprendizado e colaboração. Junte-se a nós no Crystal Lake!
+    </p>
+    <div class="flex space-x-4">
+      <a href="https://discord.gg/DYUWpTf3Bs" target="_blank" 
+         class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl text-lg font-semibold transition">
+         Entrar no Discord
+      </a>
+      <a href="#projetos" 
+         class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl text-lg font-semibold transition">
+         Explorar Projetos
+      </a>
+    </div>
+  </section>
 
-<div class="section" id="about">
-  <h2>Sobre Nós</h2>
-  <div class="card">Somos uma comunidade que ama tecnologia, jogos e cyberpunk. Venha se juntar a nós!</div>
-</div>
+  <!-- Seção Sobre -->
+  <section id="sobre" class="py-20 bg-[#0d0d0d] text-center">
+    <h3 class="text-3xl font-bold mb-6 text-red-500">Sobre Nós</h3>
+    <p class="max-w-3xl mx-auto text-lg text-gray-400">
+      A Crystal Lake é uma comunidade dedicada à colaboração, aprendizado e inovação em tecnologia. Nosso objetivo é conectar pessoas com interesses em comum e desenvolver projetos incríveis juntos.
+    </p>
+  </section>
 
-<div class="section" id="rules">
-  <h2>Regras</h2>
-  <div class="card">1. Respeite todos os membros</div>
-  <div class="card">2. Nada de spam ou publicidade sem permissão</div>
-  <div class="card">3. Divirta-se!</div>
-</div>
+  <!-- Seção Projetos -->
+  <section id="projetos" class="py-20 bg-black text-center">
+    <h3 class="text-3xl font-bold mb-10 text-red-500">Projetos</h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-[#1a0000] p-6 rounded-xl shadow-lg border border-red-800 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">Projeto 1</h4>
+        <p class="text-gray-400">Descrição do projeto 1...</p>
+      </div>
+      <div class="bg-[#1a0000] p-6 rounded-xl shadow-lg border border-red-800 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">Projeto 2</h4>
+        <p class="text-gray-400">Descrição do projeto 2...</p>
+      </div>
+      <div class="bg-[#1a0000] p-6 rounded-xl shadow-lg border border-red-800 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">Projeto 3</h4>
+        <p class="text-gray-400">Descrição do projeto 3...</p>
+      </div>
+    </div>
+  </section>
 
-<div class="section" id="events">
-  <h2>Eventos</h2>
-  <div class="card">Sorteios semanais de jogos</div>
-  <div class="card">Torneios de CS:GO e Valorant</div>
-  <div class="card">Streams exclusivas da comunidade</div>
-</div>
+  <!-- Seção Eventos -->
+  <section id="eventos" class="py-20 bg-[#0d0d0d] text-center">
+    <h3 class="text-3xl font-bold mb-10 text-red-500">Eventos</h3>
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+        <h4 class="text-xl font-semibold">Meetup Crystal Lake</h4>
+        <p class="text-gray-400">Encontro mensal para discutir tecnologia e projetos.</p>
+      </div>
+      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+        <h4 class="text-xl font-semibold">Hackathon</h4>
+        <p class="text-gray-400">Competição de programação e inovação com premiações.</p>
+      </div>
+    </div>
+  </section>
 
-<script>
-  // --- Animações de entrada ---
-  function fadeInAnime(el, delay=0){ anime({ targets: el, translateY:[50,0], opacity:[0,1], duration:1200, delay:delay, easing:'easeOutExpo' }); }
-  window.addEventListener('load', ()=>{
-    fadeInAnime('#title'); fadeInAnime('#subtitle',300); fadeInAnime('#discordBtn',600);
-  });
+  <!-- Seção Membros -->
+  <section id="membros" class="py-20 bg-black text-center">
+    <h3 class="text-3xl font-bold mb-10 text-red-500">Membros</h3>
+    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+        <div class="w-20 h-20 bg-red-700 rounded-full mx-auto mb-4"></div>
+        <h4 class="text-lg font-semibold">Membro 1</h4>
+      </div>
+      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+        <div class="w-20 h-20 bg-red-700 rounded-full mx-auto mb-4"></div>
+        <h4 class="text-lg font-semibold">Membro 2</h4>
+      </div>
+      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+        <div class="w-20 h-20 bg-red-700 rounded-full mx-auto mb-4"></div>
+        <h4 class="text-lg font-semibold">Membro 3</h4>
+      </div>
+      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+        <div class="w-20 h-20 bg-red-700 rounded-full mx-auto mb-4"></div>
+        <h4 class="text-lg font-semibold">Membro 4</h4>
+      </div>
+    </div>
+  </section>
 
-  // --- Scroll Sections ---
-  const sections = document.querySelectorAll('.section');
-  window.addEventListener('scroll', ()=>{
-    const triggerBottom = window.innerHeight * 0.85;
-    sections.forEach(sec=>{
-      const secTop = sec.getBoundingClientRect().top;
-      if(secTop < triggerBottom){ sec.classList.add('show'); }
-    });
-  });
+  <!-- Seção Blog -->
+  <section id="blog" class="py-20 bg-[#0d0d0d] text-center">
+    <h3 class="text-3xl font-bold mb-10 text-red-500">Blog</h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+        <h4 class="text-xl font-semibold">Post 1</h4>
+        <p class="text-gray-400">Resumo do post 1...</p>
+      </div>
+      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+        <h4 class="text-xl font-semibold">Post 2</h4>
+        <p class="text-gray-400">Resumo do post 2...</p>
+      </div>
+      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+        <h4 class="text-xl font-semibold">Post 3</h4>
+        <p class="text-gray-400">Resumo do post 3...</p>
+      </div>
+    </div>
+  </section>
 
-  // --- Three.js Setup ---
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 3000);
-  camera.position.z = 400;
+  <!-- Seção Contato -->
+  <section id="contato" class="py-20 bg-black text-center">
+    <h3 class="text-3xl font-bold mb-6 text-red-500">Contato</h3>
+    <p class="text-gray-400 mb-6">Entre em contato conosco pelo Discord ou email.</p>
+    <a href="https://discord.gg/DYUWpTf3Bs" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl text-lg font-semibold transition">Entrar no Discord</a>
+  </section>
 
-  const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.getElementById('container').appendChild(renderer.domElement);
-
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.enableZoom = false; controls.enablePan = false;
-
-  // --- Partículas e Linhas ---
-  const particleCount = 500;
-  const particlesGeo = new THREE.BufferGeometry();
-  const positions = new Float32Array(particleCount*3);
-  const colors = new Float32Array(particleCount*3);
-
-  for(let i=0;i<particleCount;i++){
-    positions[i*3] = (Math.random()-0.5)*2000;
-    positions[i*3+1] = (Math.random()-0.5)*2000;
-    positions[i*3+2] = (Math.random()-0.5)*2000;
-
-    const color = new THREE.Color(`hsl(${Math.random()*60+270},100%,50%)`);
-    colors[i*3] = color.r;
-    colors[i*3+1] = color.g;
-    colors[i*3+2] = color.b;
-  }
-
-  particlesGeo.setAttribute('position', new THREE.BufferAttribute(positions,3));
-  particlesGeo.setAttribute('color', new THREE.BufferAttribute(colors,3));
-
-  const particlesMat = new THREE.PointsMaterial({ size:6, vertexColors:true, transparent:true, opacity:0.8 });
-  const particles = new THREE.Points(particlesGeo, particlesMat);
-  scene.add(particles);
-
-  // Lines
-  const lineMat = new THREE.LineBasicMaterial({ color:0xff5ca2, transparent:true, opacity:0.1 });
-  const linesGeo = new THREE.BufferGeometry();
-  const linePositions = new Float32Array(particleCount*particleCount*3);
-  linesGeo.setAttribute('position', new THREE.BufferAttribute(linePositions,3));
-  const lineMesh = new THREE.LineSegments(linesGeo, lineMat);
-  scene.add(lineMesh);
-
-  function updateLines(){
-    let idx = 0;
-    for(let i=0;i<particleCount;i++){
-      for(let j=i+1;j<particleCount;j++){
-        const dx = positions[i*3]-positions[j*3];
-        const dy = positions[i*3+1]-positions[j*3+1];
-        const dz = positions[i*3+2]-positions[j*3+2];
-        const dist = Math.sqrt(dx*dx+dy*dy+dz*dz);
-        if(dist<200){
-          linePositions[idx++] = positions[i*3]; linePositions[idx++] = positions[i*3+1]; linePositions[idx++] = positions[i*3+2];
-          linePositions[idx++] = positions[j*3]; linePositions[idx++] = positions[j*3+1]; linePositions[idx++] = positions[j*3+2];
-        }
-      }
-    }
-    lineMesh.geometry.setDrawRange(0, idx/3);
-    lineMesh.geometry.attributes.position.needsUpdate=true;
-  }
-
-  // Geometries flutuantes
-  const geoGroup = new THREE.Group();
-  for(let i=0;i<20;i++){
-    const geom = new THREE.TorusKnotGeometry(Math.random()*10+10, 3,100,16);
-    const mat = new THREE.MeshStandardMaterial({ color:0xff5ca2, emissive:0x5a0bd4, emissiveIntensity:0.5, transparent:true, opacity:0.7 });
-    const mesh = new THREE.Mesh(geom, mat);
-    mesh.position.set((Math.random()-0.5)*1000,(Math.random()-0.5)*500,(Math.random()-0.5)*1000);
-    geoGroup.add(mesh);
-  }
-  scene.add(geoGroup);
-
-  // Lights
-  const ambient = new THREE.AmbientLight(0xffffff,0.5);
-  const pointLight = new THREE.PointLight(0xff5ca2,1,2000);
-  pointLight.position.set(500,500,500);
-  scene.add(ambient,pointLight);
-
-  // Animate
-  function animate(){
-    requestAnimationFrame(animate);
-    particles.rotation.y+=0.001;
-    geoGroup.rotation.y+=0.002;
-    geoGroup.rotation.x+=0.001;
-    updateLines();
-    renderer.render(scene,camera);
-  }
-  animate();
-
-  window.addEventListener('resize', ()=>{
-    camera.aspect = window.innerWidth/window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-  });
-
-  // Discord Button Particles
-  const btn = document.getElementById('discordBtn');
-  btn.addEventListener('mousemove', (e)=>{
-    let particle = document.createElement('span');
-    particle.style.position='absolute';
-    particle.style.width='6px'; particle.style.height='6px';
-    particle.style.borderRadius='50%';
-    particle.style.background='var(--accent-color)';
-    particle.style.top=e.offsetY+'px';
-    particle.style.left=e.offsetX+'px';
-    particle.style.pointerEvents='none';
-    particle.style.opacity='1';
-    particle.style.transition='all 0.5s ease-out';
-    btn.appendChild(particle);
-    setTimeout(()=>{ particle.style.top=(parseInt(particle.style.top)-30)+'px'; particle.style.opacity='0'; },10);
-    setTimeout(()=>{ btn.removeChild(particle); },500);
-  });
-</script>
+  <!-- Footer -->
+  <footer class="bg-[#1a0000] text-center py-6 border-t border-red-800">
+    <p class="text-gray-400">© 2025 Crystal Lake - Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
