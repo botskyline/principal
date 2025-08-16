@@ -6,69 +6,71 @@
   <title>Crystal Lake</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-gray-200 font-sans">
+<body class="bg-gray-900 text-gray-200 font-sans">
   <!-- Header -->
-  <header class="bg-[#1a0000] text-white p-6 shadow-md sticky top-0 z-50 border-b border-red-800">
+  <header class="bg-purple-900 text-white p-6 shadow-lg sticky top-0 z-50 border-b border-purple-700">
     <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center space-x-3">
         <!-- Logo no header -->
-        <img src="https://images-ext-1.discordapp.net/external/E_RSKchcnRsVwnOo62inl04y_OYmFSNz1DLaQwdXyVM/https/cdn.discordapp.com/icons/929147381679783997/d029fcd4917c5e85503e473bc313381d.png?format=webp&quality=lossless" alt="Logo Crystal Lake" class="w-12 h-12 rounded-full border-2 border-red-600">
+        <img src="https://images-ext-1.discordapp.net/external/E_RSKchcnRsVwnOo62inl04y_OYmFSNz1DLaQwdXyVM/https/cdn.discordapp.com/icons/929147381679783997/d029fcd4917c5e85503e473bc313381d.png?format=webp&quality=lossless" 
+             alt="Logo Crystal Lake" class="w-12 h-12 rounded-full border-2 border-purple-500">
         <h1 class="text-2xl font-bold tracking-wide">Crystal Lake</h1>
       </div>
       <nav class="space-x-6 hidden md:flex">
-        <a href="#sobre" class="hover:text-red-500">Sobre</a>
-        <a href="#projetos" class="hover:text-red-500">Projetos</a>
-        <a href="#eventos" class="hover:text-red-500">Eventos</a>
-        <a href="#membros" class="hover:text-red-500">Membros</a>
-        <a href="#blog" class="hover:text-red-500">Blog</a>
-        <a href="#contato" class="hover:text-red-500">Contato</a>
+        <a href="#sobre" class="hover:text-purple-400 transition-colors">Sobre</a>
+        <a href="#projetos" class="hover:text-purple-400 transition-colors">Projetos</a>
+        <a href="#eventos" class="hover:text-purple-400 transition-colors">Eventos</a>
+        <a href="#membros" class="hover:text-purple-400 transition-colors">Membros</a>
+        <a href="#blog" class="hover:text-purple-400 transition-colors">Blog</a>
+        <a href="#contato" class="hover:text-purple-400 transition-colors">Contato</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-black via-red-950 to-red-900 text-center px-4">
+  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-gray-900 via-purple-900 to-purple-800 text-center px-4">
     <!-- Logo central -->
-    <img src="https://images-ext-1.discordapp.net/external/E_RSKchcnRsVwnOo62inl04y_OYmFSNz1DLaQwdXyVM/https/cdn.discordapp.com/icons/929147381679783997/d029fcd4917c5e85503e473bc313381d.png?format=webp&quality=lossless" alt="Logo Crystal Lake" 
-         class="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-red-600">
+    <img src="https://images-ext-1.discordapp.net/external/E_RSKchcnRsVwnOo62inl04y_OYmFSNz1DLaQwdXyVM/https/cdn.discordapp.com/icons/929147381679783997/d029fcd4917c5e85503e473bc313381d.png?format=webp&quality=lossless" 
+         alt="Logo Crystal Lake" 
+         class="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-purple-500 shadow-xl hover:scale-105 transition-transform">
 
-    <h2 class="text-4xl md:text-6xl font-extrabold mb-4 text-white">Bem-vindo à Crystal Lake</h2>
-    <p class="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl">
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg">Bem-vindo à Crystal Lake</h2>
+    <p class="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl drop-shadow-md">
       Uma comunidade unida pela tecnologia, aprendizado e colaboração. Junte-se a nós no Crystal Lake!
     </p>
     <div class="flex space-x-4">
       <a href="https://discord.gg/DYUWpTf3Bs" target="_blank" 
-         class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl text-lg font-semibold transition">
+         class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl text-lg font-semibold shadow-lg transition transform hover:scale-105">
          Entrar no Discord
       </a>
       <a href="#projetos" 
-         class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl text-lg font-semibold transition">
+         class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-xl text-lg font-semibold shadow-lg transition transform hover:scale-105">
          Explorar Projetos
       </a>
     </div>
   </section>
 
   <!-- Seção Sobre -->
-  <section id="sobre" class="py-20 bg-[#0d0d0d] text-center">
-    <h3 class="text-3xl font-bold mb-6 text-red-500">Sobre Nós</h3>
+  <section id="sobre" class="py-20 bg-gray-900 text-center">
+    <h3 class="text-3xl font-bold mb-6 text-purple-500 drop-shadow-lg">Sobre Nós</h3>
     <p class="max-w-3xl mx-auto text-lg text-gray-400">
       A Crystal Lake é uma comunidade dedicada à colaboração, aprendizado e inovação em tecnologia. Nosso objetivo é conectar pessoas com interesses em comum e desenvolver projetos incríveis juntos.
     </p>
   </section>
 
   <!-- Seção Projetos -->
-  <section id="projetos" class="py-20 bg-black text-center">
-    <h3 class="text-3xl font-bold mb-10 text-red-500">Projetos</h3>
+  <section id="projetos" class="py-20 bg-gray-800 text-center">
+    <h3 class="text-3xl font-bold mb-10 text-purple-500 drop-shadow-lg">Projetos</h3>
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="bg-[#1a0000] p-6 rounded-xl shadow-lg border border-red-800 hover:scale-105 transition">
+      <div class="bg-purple-900 p-6 rounded-xl shadow-lg border border-purple-700 hover:scale-105 hover:shadow-2xl transition transform">
         <h4 class="text-xl font-semibold mb-2">Projeto 1</h4>
         <p class="text-gray-400">Descrição do projeto 1...</p>
       </div>
-      <div class="bg-[#1a0000] p-6 rounded-xl shadow-lg border border-red-800 hover:scale-105 transition">
+      <div class="bg-purple-900 p-6 rounded-xl shadow-lg border border-purple-700 hover:scale-105 hover:shadow-2xl transition transform">
         <h4 class="text-xl font-semibold mb-2">Projeto 2</h4>
         <p class="text-gray-400">Descrição do projeto 2...</p>
       </div>
-      <div class="bg-[#1a0000] p-6 rounded-xl shadow-lg border border-red-800 hover:scale-105 transition">
+      <div class="bg-purple-900 p-6 rounded-xl shadow-lg border border-purple-700 hover:scale-105 hover:shadow-2xl transition transform">
         <h4 class="text-xl font-semibold mb-2">Projeto 3</h4>
         <p class="text-gray-400">Descrição do projeto 3...</p>
       </div>
@@ -76,79 +78,47 @@
   </section>
 
   <!-- Seção Eventos -->
-  <section id="eventos" class="py-20 bg-[#0d0d0d] text-center">
-    <h3 class="text-3xl font-bold mb-10 text-red-500">Eventos</h3>
+  <section id="eventos" class="py-20 bg-gray-900 text-center">
+    <h3 class="text-3xl font-bold mb-10 text-purple-500 drop-shadow-lg">Eventos</h3>
     <div class="max-w-4xl mx-auto space-y-6">
-      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+      <div class="bg-purple-900 p-6 rounded-xl border border-purple-700 shadow-md hover:shadow-xl transition transform hover:scale-105">
         <h4 class="text-xl font-semibold">Meetup Crystal Lake</h4>
         <p class="text-gray-400">Encontro mensal para discutir tecnologia e projetos.</p>
       </div>
-      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
+      <div class="bg-purple-900 p-6 rounded-xl border border-purple-700 shadow-md hover:shadow-xl transition transform hover:scale-105">
         <h4 class="text-xl font-semibold">Hackathon</h4>
         <p class="text-gray-400">Competição de programação e inovação com premiações.</p>
       </div>
     </div>
   </section>
 
-<!-- Seção Membros -->
-<section id="membros" class="py-20 bg-black text-center">
-  <h3 class="text-3xl font-bold mb-10 text-red-500">Equipe STAFF</h3>
-  <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-    <!-- Membro 1 -->
-    <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
-      <img src="https://images-ext-1.discordapp.net/external/XIkRvX7wg4URdv-m4yCoS2OPEoetxtmGFQmdT9Le-DM/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/1089571004923261119/4931e9f3156c56675d33fd6067936980.png?format=webp&quality=lossless" alt="Membro 1" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-red-600">
-      <h4 class="text-lg font-semibold">xeah - Fundador</h4>
-    </div>
-
-    <!-- Membro 2 -->
-    <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
-      <img src="https://images-ext-1.discordapp.net/external/XIkRvX7wg4URdv-m4yCoS2OPEoetxtmGFQmdT9Le-DM/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/1089571004923261119/4931e9f3156c56675d33fd6067936980.png?format=webp&quality=lossless" alt="Membro 2" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-red-600">
-      <h4 class="text-lg font-semibold">Bogdan - Fundador</h4>
-    </div>
-
-    <!-- Membro 3 -->
-    <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
-      <img src="https://media.discordapp.net/attachments/1406092165247008879/1406133366243463178/gNXbkGEfoGynwAAAABJRU5ErkJggg.png?ex=68a15b3f&is=68a009bf&hm=7bea392ea2fdecb80dd00227011f7bc2e5ebcf127326d50c378c4c9f12bc7b7e&=&format=webp&quality=lossless" alt="Membro 3" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-red-600">
-      <h4 class="text-lg font-semibold">?</h4>
-    </div>
-
-    <!-- Membro 4 -->
-    <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
-      <img src="https://media.discordapp.net/attachments/1406092165247008879/1406133366243463178/gNXbkGEfoGynwAAAABJRU5ErkJggg.png?ex=68a15b3f&is=68a009bf&hm=7bea392ea2fdecb80dd00227011f7bc2e5ebcf127326d50c378c4c9f12bc7b7e&=&format=webp&quality=lossless" alt="Membro 4" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-red-600">
-      <h4 class="text-lg font-semibold">?</h4>
-    </div>
-  </div>
-</section>
-
-  <!-- Seção Blog -->
-  <section id="blog" class="py-20 bg-[#0d0d0d] text-center">
-    <h3 class="text-3xl font-bold mb-10 text-red-500">Blog</h3>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
-        <h4 class="text-xl font-semibold">Post 1</h4>
-        <p class="text-gray-400">Resumo do post 1...</p>
+  <!-- Seção Membros -->
+  <section id="membros" class="py-20 bg-gray-800 text-center">
+    <h3 class="text-3xl font-bold mb-10 text-purple-500 drop-shadow-lg">Equipe STAFF</h3>
+    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="bg-purple-900 p-6 rounded-xl border border-purple-700 shadow-lg hover:scale-105 transition transform">
+        <img src="https://images-ext-1.discordapp.net/external/XIkRvX7wg4URdv-m4yCoS2OPEoetxtmGFQmdT9Le-DM/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/1089571004923261119/4931e9f3156c56675d33fd6067936980.png?format=webp&quality=lossless" 
+             alt="Membro 1" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-purple-500 shadow-md hover:shadow-xl transition">
+        <h4 class="text-lg font-semibold text-white">xeah - Fundador</h4>
       </div>
-      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
-        <h4 class="text-xl font-semibold">Post 2</h4>
-        <p class="text-gray-400">Resumo do post 2...</p>
+      <div class="bg-purple-900 p-6 rounded-xl border border-purple-700 shadow-lg hover:scale-105 transition transform">
+        <img src="https://images-ext-1.discordapp.net/external/XIkRvX7wg4URdv-m4yCoS2OPEoetxtmGFQmdT9Le-DM/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/1089571004923261119/4931e9f3156c56675d33fd6067936980.png?format=webp&quality=lossless" 
+             alt="Membro 2" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-purple-500 shadow-md hover:shadow-xl transition">
+        <h4 class="text-lg font-semibold text-white">Bogdan - Fundador</h4>
       </div>
-      <div class="bg-[#1a0000] p-6 rounded-xl border border-red-800">
-        <h4 class="text-xl font-semibold">Post 3</h4>
-        <p class="text-gray-400">Resumo do post 3...</p>
+      <div class="bg-purple-900 p-6 rounded-xl border border-purple-700 shadow-lg hover:scale-105 transition transform">
+        <img src="https://media.discordapp.net/attachments/1406092165247008879/1406133366243463178/gNXbkGEfoGynwAAAABJRU5ErkJggg.png?ex=68a15b3f&is=68a009bf&hm=7bea392ea2fdecb80dd00227011f7bc2e5ebcf127326d50c378c4c9f12bc7b7e&=&format=webp&quality=lossless" 
+             alt="Membro 3" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-purple-500 shadow-md hover:shadow-xl transition">
+        <h4 class="text-lg font-semibold text-white">?</h4>
+      </div>
+      <div class="bg-purple-900 p-6 rounded-xl border border-purple-700 shadow-lg hover:scale-105 transition transform">
+        <img src="https://media.discordapp.net/attachments/1406092165247008879/1406133366243463178/gNXbkGEfoGynwAAAABJRU5ErkJggg.png?ex=68a15b3f&is=68a009bf&hm=7bea392ea2fdecb80dd00227011f7bc2e5ebcf127326d50c378c4c9f12bc7b7e&=&format=webp&quality=lossless" 
+             alt="Membro 4" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-purple-500 shadow-md hover:shadow-xl transition">
+        <h4 class="text-lg font-semibold text-white">?</h4>
       </div>
     </div>
-  </section>
-
-  <!-- Seção Contato -->
-  <section id="contato" class="py-20 bg-black text-center">
-    <h3 class="text-3xl font-bold mb-6 text-red-500">Contato</h3>
-    <p class="text-gray-400 mb-6">Entre em contato conosco pelo Discord ou email.</p>
-    <a href="https://discord.gg/DYUWpTf3Bs" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl text-lg font-semibold transition">Entrar no Discord</a>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#1a0000] text-center py-6 border-t border-red-800">
-    <p class="text-gray-400">© 2025 Crystal Lake - Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
+  <footer class="bg-purple-900 text-center py-6 border-t border-purple-700">
+    <p class="text-gray-400
