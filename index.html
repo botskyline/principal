@@ -3,61 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comunidade Jamelão</title>
+  <title>Crystal Lake</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-[#0b0b0b] text-gray-200 font-sans">
   <!-- Header -->
-  <header class="bg-indigo-600 text-white p-6 shadow-md sticky top-0 z-50">
+  <header class="bg-[#1a0000] text-white p-6 shadow-md sticky top-0 z-50 border-b border-red-800">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Comunidade Jamelão</h1>
-      <nav class="space-x-6">
-        <a href="#sobre" class="hover:underline">Sobre</a>
-        <a href="#projetos" class="hover:underline">Projetos</a>
-        <a href="#eventos" class="hover:underline">Eventos</a>
-        <a href="#membros" class="hover:underline">Membros</a>
-        <a href="#blog" class="hover:underline">Blog</a>
-        <a href="#contato" class="hover:underline">Contato</a>
+      <div class="flex items-center space-x-3">
+        <img src="https://via.placeholder.com/50" alt="Logo Crystal Lake" class="w-12 h-12 rounded-full border-2 border-red-600">
+        <h1 class="text-2xl font-bold tracking-wide">Crystal Lake</h1>
+      </div>
+      <nav class="space-x-6 text-gray-300">
+        <a href="#sobre" class="hover:text-red-500 transition">Sobre</a>
+        <a href="#projetos" class="hover:text-red-500 transition">Projetos</a>
+        <a href="#eventos" class="hover:text-red-500 transition">Eventos</a>
+        <a href="#membros" class="hover:text-red-500 transition">Membros</a>
+        <a href="#blog" class="hover:text-red-500 transition">Blog</a>
+        <a href="#contato" class="hover:text-red-500 transition">Contato</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="text-center py-24 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
-    <h2 class="text-5xl font-bold mb-6">Bem-vindo à Comunidade Jamelão</h2>
-    <p class="text-lg mb-8 max-w-2xl mx-auto">Um espaço para aprender, compartilhar e crescer juntos no mundo da tecnologia e da inovação.</p>
-    <a href="#projetos" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold shadow-md hover:bg-gray-100 transition">Explore nossos projetos</a>
+  <section class="text-center py-28 bg-gradient-to-r from-red-900 via-black to-red-800 text-white">
+    <img src="https://via.placeholder.com/120" alt="Crystal Lake Logo" class="mx-auto mb-6 w-32 h-32 rounded-full border-4 border-red-600">
+    <h2 class="text-5xl font-extrabold mb-6 tracking-tight">Bem-vindo à Crystal Lake</h2>
+    <p class="text-lg mb-10 max-w-2xl mx-auto text-gray-300">Uma comunidade unida pela tecnologia, aprendizado e colaboração. Junte-se a nós no Crystal Lake!</p>
+    <div class="space-x-4">
+      <a href="https://discord.gg/seulink" target="_blank" class="bg-red-600 text-white px-10 py-4 rounded-xl font-semibold shadow-lg hover:bg-red-700 transition">Entrar no Discord</a>
+      <a href="#projetos" class="bg-gray-800 text-red-400 px-10 py-4 rounded-xl font-semibold shadow-lg hover:bg-gray-700 transition">Explorar Projetos</a>
+    </div>
   </section>
 
   <!-- Sobre -->
   <section id="sobre" class="container mx-auto py-20 px-6">
-    <h3 class="text-4xl font-bold mb-8 text-center">Sobre Nós</h3>
-    <p class="text-center max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
-      A Comunidade Jamelão é formada por entusiastas e profissionais de diversas áreas da tecnologia.
-      Nosso propósito é construir um ambiente inclusivo onde todos possam colaborar, trocar experiências
-      e desenvolver projetos que impactem positivamente a sociedade.
+    <h3 class="text-4xl font-bold mb-8 text-center text-red-500">Sobre Nós</h3>
+    <p class="text-center max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed">
+      A Crystal Lake é uma comunidade de entusiastas e profissionais da tecnologia, apaixonados por inovação e aprendizado colaborativo. Nosso objetivo é construir um espaço acolhedor para todos que queiram crescer, compartilhar ideias e participar de projetos que transformam o futuro.
     </p>
   </section>
 
   <!-- Projetos -->
-  <section id="projetos" class="bg-gray-100 py-20 px-6">
+  <section id="projetos" class="bg-[#1a0000] py-20 px-6">
     <div class="container mx-auto">
-      <h3 class="text-4xl font-bold mb-12 text-center">Projetos</h3>
+      <h3 class="text-4xl font-bold mb-12 text-center text-red-500">Projetos</h3>
       <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h4 class="text-2xl font-semibold mb-3">Projeto 1</h4>
-          <p class="text-gray-600 mb-4">Descrição breve do projeto 1. Um projeto open source para a comunidade.</p>
-          <a href="#" class="text-indigo-600 hover:underline">Saiba mais</a>
+        <div class="bg-[#0d0d0d] p-6 rounded-xl shadow-lg border border-red-800 hover:border-red-500 transition">
+          <h4 class="text-2xl font-semibold mb-3 text-white">Projeto Open Source</h4>
+          <p class="text-gray-400 mb-4">Criado pela comunidade, focado em colaboração global.</p>
+          <a href="#" class="text-red-500 hover:underline">Saiba mais</a>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h4 class="text-2xl font-semibold mb-3">Projeto 2</h4>
-          <p class="text-gray-600 mb-4">Descrição breve do projeto 2. Criando impacto através da colaboração.</p>
-          <a href="#" class="text-indigo-600 hover:underline">Saiba mais</a>
+        <div class="bg-[#0d0d0d] p-6 rounded-xl shadow-lg border border-red-800 hover:border-red-500 transition">
+          <h4 class="text-2xl font-semibold mb-3 text-white">App Crystal</h4>
+          <p class="text-gray-400 mb-4">Uma aplicação desenvolvida coletivamente para apoiar novos devs.</p>
+          <a href="#" class="text-red-500 hover:underline">Saiba mais</a>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h4 class="text-2xl font-semibold mb-3">Projeto 3</h4>
-          <p class="text-gray-600 mb-4">Descrição breve do projeto 3. Compartilhando conhecimento com todos.</p>
-          <a href="#" class="text-indigo-600 hover:underline">Saiba mais</a>
+        <div class="bg-[#0d0d0d] p-6 rounded-xl shadow-lg border border-red-800 hover:border-red-500 transition">
+          <h4 class="text-2xl font-semibold mb-3 text-white">Mentoria Coletiva</h4>
+          <p class="text-gray-400 mb-4">Espaço de troca entre membros experientes e iniciantes.</p>
+          <a href="#" class="text-red-500 hover:underline">Saiba mais</a>
         </div>
       </div>
     </div>
@@ -65,45 +70,45 @@
 
   <!-- Eventos -->
   <section id="eventos" class="container mx-auto py-20 px-6">
-    <h3 class="text-4xl font-bold mb-12 text-center">Próximos Eventos</h3>
+    <h3 class="text-4xl font-bold mb-12 text-center text-red-500">Próximos Eventos</h3>
     <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h4 class="text-2xl font-semibold mb-2">Meetup de Tecnologia</h4>
-        <p class="text-gray-600 mb-2">Data: 25 de Setembro de 2025</p>
-        <p class="text-gray-700">Um encontro para discutir as últimas tendências em tecnologia e inovação.</p>
+      <div class="bg-[#0d0d0d] p-6 rounded-xl shadow-lg border border-red-800 hover:border-red-500 transition">
+        <h4 class="text-2xl font-semibold mb-2 text-white">Meetup Crystal Lake</h4>
+        <p class="text-gray-400 mb-2">Data: 25 de Setembro de 2025</p>
+        <p class="text-gray-300">Networking, palestras e troca de conhecimento entre membros.</p>
       </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h4 class="text-2xl font-semibold mb-2">Workshop de Open Source</h4>
-        <p class="text-gray-600 mb-2">Data: 10 de Outubro de 2025</p>
-        <p class="text-gray-700">Aprenda a contribuir com projetos open source e colabore com a comunidade.</p>
+      <div class="bg-[#0d0d0d] p-6 rounded-xl shadow-lg border border-red-800 hover:border-red-500 transition">
+        <h4 class="text-2xl font-semibold mb-2 text-white">Hackathon Crystal</h4>
+        <p class="text-gray-400 mb-2">Data: 10 de Outubro de 2025</p>
+        <p class="text-gray-300">24h de inovação e criação de soluções em equipe.</p>
       </div>
     </div>
   </section>
 
   <!-- Membros -->
-  <section id="membros" class="bg-gray-100 py-20 px-6">
+  <section id="membros" class="bg-[#1a0000] py-20 px-6">
     <div class="container mx-auto">
-      <h3 class="text-4xl font-bold mb-12 text-center">Membros da Comunidade</h3>
+      <h3 class="text-4xl font-bold mb-12 text-center text-red-500">Membros da Comunidade</h3>
       <div class="grid md:grid-cols-4 gap-8 text-center">
-        <div class="bg-white p-6 rounded-xl shadow">
-          <img src="https://via.placeholder.com/150" alt="Membro 1" class="w-24 h-24 mx-auto rounded-full mb-4">
-          <h4 class="text-xl font-semibold">Membro 1</h4>
-          <p class="text-gray-600">Desenvolvedor Fullstack</p>
+        <div class="bg-[#0d0d0d] p-6 rounded-xl shadow border border-red-800">
+          <img src="https://via.placeholder.com/150" alt="Membro 1" class="w-24 h-24 mx-auto rounded-full mb-4 border-2 border-red-600">
+          <h4 class="text-xl font-semibold text-white">Membro 1</h4>
+          <p class="text-gray-400">Dev Backend</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow">
-          <img src="https://via.placeholder.com/150" alt="Membro 2" class="w-24 h-24 mx-auto rounded-full mb-4">
-          <h4 class="text-xl font-semibold">Membro 2</h4>
-          <p class="text-gray-600">Designer UI/UX</p>
+        <div class="bg-[#0d0d0d] p-6 rounded-xl shadow border border-red-800">
+          <img src="https://via.placeholder.com/150" alt="Membro 2" class="w-24 h-24 mx-auto rounded-full mb-4 border-2 border-red-600">
+          <h4 class="text-xl font-semibold text-white">Membro 2</h4>
+          <p class="text-gray-400">Dev Frontend</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow">
-          <img src="https://via.placeholder.com/150" alt="Membro 3" class="w-24 h-24 mx-auto rounded-full mb-4">
-          <h4 class="text-xl font-semibold">Membro 3</h4>
-          <p class="text-gray-600">Engenheiro de Dados</p>
+        <div class="bg-[#0d0d0d] p-6 rounded-xl shadow border border-red-800">
+          <img src="https://via.placeholder.com/150" alt="Membro 3" class="w-24 h-24 mx-auto rounded-full mb-4 border-2 border-red-600">
+          <h4 class="text-xl font-semibold text-white">Membro 3</h4>
+          <p class="text-gray-400">UI/UX Designer</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow">
-          <img src="https://via.placeholder.com/150" alt="Membro 4" class="w-24 h-24 mx-auto rounded-full mb-4">
-          <h4 class="text-xl font-semibold">Membro 4</h4>
-          <p class="text-gray-600">DevOps</p>
+        <div class="bg-[#0d0d0d] p-6 rounded-xl shadow border border-red-800">
+          <img src="https://via.placeholder.com/150" alt="Membro 4" class="w-24 h-24 mx-auto rounded-full mb-4 border-2 border-red-600">
+          <h4 class="text-xl font-semibold text-white">Membro 4</h4>
+          <p class="text-gray-400">DevOps</p>
         </div>
       </div>
     </div>
@@ -111,37 +116,38 @@
 
   <!-- Blog -->
   <section id="blog" class="container mx-auto py-20 px-6">
-    <h3 class="text-4xl font-bold mb-12 text-center">Últimos Artigos</h3>
+    <h3 class="text-4xl font-bold mb-12 text-center text-red-500">Últimos Artigos</h3>
     <div class="grid md:grid-cols-3 gap-10">
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h4 class="text-2xl font-semibold mb-3">Artigo 1</h4>
-        <p class="text-gray-600 mb-4">Resumo breve sobre o artigo 1.</p>
-        <a href="#" class="text-indigo-600 hover:underline">Ler mais</a>
+      <div class="bg-[#0d0d0d] p-6 rounded-xl shadow-lg border border-red-800 hover:border-red-500 transition">
+        <h4 class="text-2xl font-semibold mb-3 text-white">Artigo 1</h4>
+        <p class="text-gray-400 mb-4">Resumo breve sobre o artigo 1.</p>
+        <a href="#" class="text-red-500 hover:underline">Ler mais</a>
       </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h4 class="text-2xl font-semibold mb-3">Artigo 2</h4>
-        <p class="text-gray-600 mb-4">Resumo breve sobre o artigo 2.</p>
-        <a href="#" class="text-indig
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h4 class="text-2xl font-semibold mb-3">Artigo 3</h4>
-        <p class="text-gray-600 mb-4">Resumo breve sobre o artigo 3.</p>
-        <a href="#" class="text-indigo-600 hover:underline">Ler mais</a>
+      <div class="bg-[#0d0d0d] p-6 rounded-xl shadow-lg border border-red-800 hover:border-red-500 transition">
+        <h4 class="text-2xl font-semibold mb-3 text-white">Artigo 2</h4>
+        <p class="text-gray-400 mb-4">Resumo breve sobre o artigo 2.</p>
+        <a href="#" class="text-red-500 hover:underline">Ler mais</a>
+      </div>
+      <div class="bg-[#0d0d0d] p-6 rounded-xl shadow-lg border border-red-800 hover:border-red-500 transition">
+        <h4 class="text-2xl font-semibold mb-3 text-white">Artigo 3</h4>
+        <p class="text-gray-400 mb-4">Resumo breve sobre o artigo 3.</p>
+        <a href="#" class="text-red-500 hover:underline">Ler mais</a>
       </div>
     </div>
   </section>
 
   <!-- Contato -->
-  <section id="contato" class="bg-indigo-600 text-white py-20 px-6 text-center">
-    <h3 class="text-4xl font-bold mb-6">Entre em Contato</h3>
-    <p class="mb-6 max-w-xl mx-auto">Quer participar ou colaborar com a comunidade? Fale com a gente!</p>
-    <a href="mailto:contato@comunidadejamelao.dev" class="bg-white text-indigo-600 px-8 py-4 rounded-lg shadow hover:bg-gray-100 transition">
+  <section id="contato" class="bg-gradient-to-r from-red-900 via-black to-red-800 py-20 px-6 text-center">
+    <h3 class="text-4xl font-bold mb-6 text-red-500">Entre em Contato</h3>
+    <p class="mb-6 max-w-xl mx-auto text-gray-300">Quer participar ou colaborar com a Crystal Lake? Fale com a gente!</p>
+    <a href="mailto:crystallake@gmail.com" class="bg-red-600 text-white px-10 py-4 rounded-xl shadow-lg hover:bg-red-700 transition">
       Enviar E-mail
     </a>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-8 text-center">
-    <p>&copy; 2025 Comunidade Jamelão. Todos os direitos reservados.</p>
+  <footer class="bg-black text-gray-500 py-8 text-center border-t border-red-800">
+    <p>&copy; 2025 Crystal Lake. Todos os direitos reservados.</p>
     <p class="mt-2">Feito com ❤️ pela comunidade</p>
   </footer>
 </body>
