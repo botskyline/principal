@@ -1,168 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skyline BOT</title>
-<style>
-    :root {
-        --discord-blue: #5865F2;
-        --discord-green: #57F287;
-        --discord-dark: #23272A;
-        --discord-gray: #2C2F33;
-    }
-
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background-color: var(--discord-dark);
-        color: white;
-    }
-
-    header {
-        background-color: var(--discord-gray);
-        padding: 15px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    }
-
-    header img {
-        height: 40px;
-        border-radius: 8px;
-    }
-
-    header h1 {
-        font-size: 20px;
-        margin: 0;
-        color: var(--discord-blue);
-    }
-
-    .intro {
-        text-align: center;
-        padding: 50px 20px;
-    }
-
-    .intro h2 {
-        font-size: 28px;
-        color: var(--discord-blue);
-    }
-
-    .intro p {
-        font-size: 16px;
-        color: #ccc;
-        max-width: 600px;
-        margin: auto;
-    }
-
-    .commands {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 30px;
-        max-width: 1000px;
-        margin: auto;
-    }
-
-    .command {
-        background-color: var(--discord-gray);
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.4);
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .command:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 20px rgba(88, 101, 242, 0.5);
-    }
-
-    .command h3 {
-        color: var(--discord-green);
-    }
-
-    .buttons {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 12px 25px;
-        margin: 10px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        color: white;
-        transition: 0.2s;
-    }
-
-    .btn-blue {
-        background-color: var(--discord-blue);
-    }
-    .btn-blue:hover {
-        background-color: #4752C4;
-    }
-
-    .btn-green {
-        background-color: var(--discord-green);
-    }
-    .btn-green:hover {
-        background-color: #3BA55D;
-    }
-
-    footer {
-        background-color: var(--discord-gray);
-        text-align: center;
-        padding: 15px;
-        color: #aaa;
-        margin-top: 20px;
-    }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crystal Lake</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-<header>
-    <h1>🤖 Skyline BOT</h1>
-    <img src="https://images-ext-1.discordapp.net/external/MmsjxAdMzvDQxLI1JSga-5wlE4Y0sosXEUv4tug_L24/https/cdn.discordapp.com/icons/1404313585777377280/1c379ea085db450fa988bb740f2f166f.png?format=webp&quality=lossless" alt="Logo Bot">
-</header>
-
-<section class="intro">
-    <h2>Seu bot de moderação, diversão e utilidades</h2>
-    <p>Skyline BOT oferece tudo o que você precisa para gerenciar e melhorar seu servidor. Moderação, tickets, verificação e muito mais!</p>
-</section>
-
-<section class="commands">
-    <div class="command">
-        <h3>/ban</h3>
-        <p>Bane um usuário do servidor com motivo opcional.</p>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white p-6 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Crystal Lake</h1>
+      <nav class="space-x-6">
+        <a href="#sobre" class="hover:underline">Sobre</a>
+        <a href="#projetos" class="hover:underline">Projetos</a>
+        <a href="#eventos" class="hover:underline">Eventos</a>
+        <a href="#membros" class="hover:underline">Membros</a>
+        <a href="#blog" class="hover:underline">Blog</a>
+        <a href="#contato" class="hover:underline">Contato</a>
+      </nav>
     </div>
-    <div class="command">
-        <h3>/kick</h3>
-        <p>Expulsa um usuário rapidamente.</p>
-    </div>
-    <div class="command">
-        <h3>/ticket</h3>
-        <p>Abre um sistema de suporte para seu servidor.</p>
-    </div>
-    <div class="command">
-        <h3>/verificar</h3>
-        <p>Verifica membros novos e libera acesso.</p>
-    </div>
-</section>
+  </header>
 
-<div class="buttons">
-    <a href="https://discord.com/oauth2/authorize?client_id=1404289118866767912&permissions=8&scope=bot%20applications.commands" class="btn btn-blue">➕ Adicionar ao Discord</a>
-    <a href="https://discord.gg/EMSJs28b7S" class="btn btn-green">💬 Servidor de Suporte</a>
-</div>
+  <!-- Hero -->
+  <section class="text-center py-24 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+    <h2 class="text-5xl font-bold mb-6">Bem-vindo à Crystal Lake</h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto">Um espaço para aprender, compartilhar e crescer juntos no mundo da tecnologia e da inovação.</p>
+    <a href="#projetos" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold shadow-md hover:bg-gray-100 transition">Explore nossos projetos</a>
+  </section>
 
-<footer>
-    Skyline BOT © 2025 - Criado por hiro
-</footer>
+  <!-- Sobre -->
+  <section id="sobre" class="container mx-auto py-20 px-6">
+    <h3 class="text-4xl font-bold mb-8 text-center">Sobre Nós</h3>
+    <p class="text-center max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+      A Crystal Lake é formada por entusiastas e profissionais de diversas áreas da tecnologia.
+      Nosso propósito é construir um ambiente inclusivo onde todos possam colaborar, trocar experiências
+      e desenvolver projetos que impactem positivamente a sociedade.
+    </p>
+  </section>
 
+  <!-- Projetos -->
+  <section id="projetos" class="bg-gray-100 py-20 px-6">
+    <div class="container mx-auto">
+      <h3 class="text-4xl font-bold mb-12 text-center">Projetos</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h4 class="text-2xl font-semibold mb-3">Projeto 1</h4>
+          <p class="text-gray-600 mb-4">Descrição breve do projeto 1. Um projeto open source para a comunidade.</p>
+          <a href="#" class="text-indigo-600 hover:underline">Saiba mais</a>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h4 class="text-2xl font-semibold mb-3">Projeto 2</h4>
+          <p class="text-gray-600 mb-4">Descrição breve do projeto 2. Criando impacto através da colaboração.</p>
+          <a href="#" class="text-indigo-600 hover:underline">Saiba mais</a>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h4 class="text-2xl font-semibold mb-3">Projeto 3</h4>
+          <p class="text-gray-600 mb-4">Descrição breve do projeto 3. Compartilhando conhecimento com todos.</p>
+          <a href="#" class="text-indigo-600 hover:underline">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eventos -->
+  <section id="eventos" class="container mx-auto py-20 px-6">
+    <h3 class="text-4xl font-bold mb-12 text-center">Próximos Eventos</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-2xl font-semibold mb-2">Meetup de Tecnologia</h4>
+        <p class="text-gray-600 mb-2">Data: 25 de Setembro de 2025</p>
+        <p class="text-gray-700">Um encontro para discutir as últimas tendências em tecnologia e inovação.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-2xl font-semibold mb-2">Workshop de Open Source</h4>
+        <p class="text-gray-600 mb-2">Data: 10 de Outubro de 2025</p>
+        <p class="text-gray-700">Aprenda a contribuir com projetos open source e colabore com a comunidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membros -->
+  <section id="membros" class="bg-gray-100 py-20 px-6">
+    <div class="container mx-auto">
+      <h3 class="text-4xl font-bold mb-12 text-center">Membros da Comunidade</h3>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <img src="https://via.placeholder.com/150" alt="Membro 1" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold">Membro 1</h4>
+          <p class="text-gray-600">Desenvolvedor Fullstack</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <img src="https://via.placeholder.com/150" alt="Membro 2" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold">Membro 2</h4>
+          <p class="text-gray-600">Designer UI/UX</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <img src="https://via.placeholder.com/150" alt="Membro 3" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold">Membro 3</h4>
+          <p class="text-gray-600">Engenheiro de Dados</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <img src="https://via.placeholder.com/150" alt="Membro 4" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold">Membro 4</h4>
+          <p class="text-gray-600">DevOps</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="container mx-auto py-20 px-6">
+    <h3 class="text-4xl font-bold mb-12 text-center">Últimos Artigos</h3>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-2xl font-semibold mb-3">Artigo 1</h4>
+        <p class="text-gray-600 mb-4">Resumo breve sobre o artigo 1.</p>
+        <a href="#" class="text-indigo-600 hover:underline">Ler mais</a>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-2xl font-semibold mb-3">Artigo 2</h4>
+        <p class="text-gray-600 mb-4">Resumo breve sobre o artigo 2.</p>
+        <a href="#" class="text-indigo-600 hover:underline">Ler mais</a>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-2xl font-semibold mb-3">Artigo 3</h4>
+        <p class="text-gray-600 mb-4">Resumo breve sobre o artigo 3.</p>
+        <a href="#" class="text-indigo-600 hover:underline">Ler mais</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="bg-indigo-600 text-white py-20 px-6 text-center">
+    <h3 class="text-4xl font-bold mb-6">Entre em Contato</h3>
+    <p class="mb-6 max-w-xl mx-auto">Quer participar ou colaborar com a comunidade? Fale com a gente!</p>
+    <a href="mailto:contato@comunidadejamelao.dev" class="bg-white text-indigo-600 px-8 py-4 rounded-lg shadow hover:bg-gray-100 transition">
+      Enviar E-mail
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+    <p>&copy; 2025 Crystal Lake. Todos os direitos reservados.</p>
+    <p class="mt-2">Feito com ❤️ pela comunidade</p>
+  </footer>
 </body>
 </html>
